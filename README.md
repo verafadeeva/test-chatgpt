@@ -10,6 +10,7 @@
 - poetry
 
 ### Запуск проекта
+
 1. Склонировать репозиторий:
 
 ```
@@ -19,12 +20,22 @@ git clone git@github.com:verafadeeva/test-chatgpt.git
 ```
 cd test-chatgpt
 ```
-3. Для управления зависимостями в проекте используется [poetry](https://python-poetry.org/docs/).
-4. В директории /test-chatgpt выполнить команду:
+3. В корне проекта необходимо создать .env файл с таким содержанием:
+```
+URL_GPT='https://api.openai.com/v1/chat/completions'
+API_KEY='<your key>'
+
+SCOPE='GIGACHAT_API_PERS'
+AUTH_CREDENTIALS='<your key>'
+URL_GIGACHAT='https://gigachat.devices.sberbank.ru/api/v1/chat/completions'
+AUTH_URL='https://ngw.devices.sberbank.ru:9443/api/v2/oauth'
+```
+4. Для управления зависимостями в проекте используется [poetry](https://python-poetry.org/docs/).
+5. В директории /test-chatgpt выполнить команду:
 ```
 make
 ```
-5. После установки зависимостей и активации окружения, для запуска сервера выполнить:
+6. После установки зависимостей и активации окружения, для запуска сервера выполнить:
 ```
 make run
 ```
@@ -54,16 +65,16 @@ make run
     "model": "gpt-3.5-turbo",
     "messages": [
         {
-        "role": "system",
-        "content": "Ты заботливый ассистент и хочешь помочь пользователю решить его проблему"
+            "role": "system",
+            "content": "Ты заботливый ассистент и хочешь помочь пользователю решить его проблему"
         },
         {
-        "role": "user",
-        "content": "Привет!"
+            "role": "user",
+            "content": "Привет!"
         },
         {
-        "role": "assistant",
-        "content": "Привет! Чем я могу тебе помочь?"
+            "role": "assistant",
+            "content": "Привет! Чем я могу тебе помочь?"
         }
     ]
 }
@@ -89,16 +100,16 @@ make run
     "model": "GigaChat:latest",
     "messages": [
         {
-        "role": "system",
-        "content": "Ты заботливый ассистент и хочешь помочь пользователю решить его проблему"
+            "role": "system",
+            "content": "Ты заботливый ассистент и хочешь помочь пользователю решить его проблему"
         },
         {
-        "role": "user",
-        "content": "Привет!"
+            "role": "user",
+            "content": "Привет!"
         },
         {
-        "role": "assistant",
-        "content": "Привет! Чем я могу тебе помочь?"
+            "role": "assistant",
+            "content": "Привет! Чем я могу тебе помочь?"
         }
     ]
 }
