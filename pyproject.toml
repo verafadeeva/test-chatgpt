@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "test-chatgpt"
+version = "0.1.0"
+description = "This is proxy-server, accepts requests from users, redirects them to the GPT chat and gives the received response"
+authors = ["verafadeeva <lunatik.yar@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "test_chatgpt"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = {extras = ["speedups"], version = "^3.9.1"}
+pydantic = "^2.5.2"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
