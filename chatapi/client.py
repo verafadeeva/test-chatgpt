@@ -7,7 +7,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from chatapi.exceptions import ChatGPTException, GigaChatException
+from exceptions import ChatGPTException, GigaChatException
 
 load_dotenv()
 

@@ -1,9 +1,9 @@
 from aiohttp import web
 from pydantic import ValidationError
 
-from chatapi.models import ChatModel
-from chatapi.client import answer_chatgpt, answer_gigachat
-from chatapi.exceptions import ChatGPTException, GigaChatException
+from models import ChatModel
+from client import answer_chatgpt, answer_gigachat
+from exceptions import ChatGPTException, GigaChatException
 
 routes = web.RouteTableDef()
 
